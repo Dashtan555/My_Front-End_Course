@@ -25,6 +25,12 @@ this is a ~~tachado~~ text
 2. apple
 3. etc
 
+<!-- Listas de deficiones -->
+
+término
+: definición
+
+
 ## Enlaces
 [intecel.net](https://www.intecel.net/)
 

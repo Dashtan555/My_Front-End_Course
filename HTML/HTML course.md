@@ -4,6 +4,7 @@
 **Índice**
 1. [Primeros pasos](#id1)
 2. [Texto](#id2)
+    * [Encabezado](#id2.1)
 3. [Navegación](#id3)
 4. [Imágenes](#id4)
 5. [Multimedia](#id5)
@@ -59,6 +60,104 @@ Una pagina web tiene una estructura de una arbol.
 <div id='id2'>
 
 ## **Texto**
+
+Simple texto, cada vez que uso la etiqueta p, salta a otra línea, el objetivo de HTML no es dar apariencia, sino mas bien dar **relevancia o significado** a los diferentes elementos y textos de una pagina web.
+
+* em: enfasis.
+* i: cursiva.
+* b: bold, para llamar la atención.
+* strong: importancia del contenido.
+* small: representa un texto mas pequeño.
+
+```html
+<p>Simple Párrafo</p>
+<p>Esto <em>no</em> es un error</p>
+<p>Miré a las nubes y pensé, <i>esto no puede ser real!</i></p>
+<p><b>HTML</b>me llama la ateción</p>
+<p>No te olvides de la importacia de <strong>HTML</strong></p>
+<p><small>&copy;2021. Todos los derechos reservados.</small></p>
+<!-- Diferencia entre línea y bloque -->
+<p>Simple <span>Párrafo</span></p> <!-- Misma línea, etiqueta de línea -->
+<p>Simple <p>Párrafo</p></p> <!-- Salta a otra linea, etiqueta de bloque -->
+<b>No cerrada <!-- Tener cuidado al cerrar, puede arrastrar el estilo -->
+<p>Estas&nbsp;palabras&nbsp;no&nbsp;saltan&nbsp;líneas&nbsp;en&nbsp;ventanas&nbsp;pequeñas</p>
+
+```
+En **HTML** no es sensible a las mayusculas o minusculas en su programación
+
+<div id='id2.1'>
+
+* ### **Encabezado**
+Etiquetas muy importantes que indican los títulos y subtítulos de la pagina web, da diferente significado a cada texto, sirve para ubiar al buscador como google, bing.
+
+```html
+<h1>Título</h1>
+<h2>Subtítulo</h2>
+<h3>Subtítulo</h3>
+<h4>Subtítulo</h4>
+<h5>Subtítulo</h5>
+<h6>Subtítulo</h6>
+```
+
+<div id='id2.2'>
+
+* ### **Listas**
+Para generación de listas
+* ul: lista desordenada
+* li: item de lista
+* ol: listas ordenadas
+```html
+<!-- Listas desordenadas -->
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+
+<!-- Listas ordenadas -->
+
+<ol>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ol>
+
+<!-- Listas de definiciones -->
+
+<dl>
+    <dt>HTML</dt>
+    <dd>CSS</dd>
+    <dd>JavaScript</dd>
+</dl>
+
+```
+
+<div id='id2.3'>
+
+* ### **Formatos**
+
+```html
+<!-- Este es un comentario -->
+<p title="Nota">Párrafo</p>
+```
+
+<div id='id2.4'>
+
+* ### **Citas**
+
+```html
+<!-- Este es un comentario -->
+<p title="Nota">Párrafo</p>
+```
+
+<div id='id2.5'>
+
+* ### **Tiempo**
+
+```html
+<!-- Este es un comentario -->
+<p title="Nota">Párrafo</p>
+```
 
 <div id='id3'>
 
