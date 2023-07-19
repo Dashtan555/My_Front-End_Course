@@ -26,10 +26,12 @@ this is a ~~tachado~~ text
 3. etc
 
 <!-- Listas de deficiones -->
-
-término
-: definición
-
+<dl>
+    <dt> Hojas secas
+    <dd>Esto es una prueba para hacer experimentos en
+    <dt>Otra defición
+    <dd>esta es otra defi
+</dl>
 
 ## Enlaces
 [intecel.net](https://www.intecel.net/)
