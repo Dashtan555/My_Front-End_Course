@@ -9,7 +9,7 @@ Estos son mis anotes respecto a los cursos de:
 <!DOCTYPE html>
 <html>
     <main>
-        <h1>Hello World..!!</h1>
+        <h1>Hello World...!!</h1>
     </main>
 </html>
 ```
