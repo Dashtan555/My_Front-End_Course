@@ -23,12 +23,38 @@
     * [Textarea](#id8.2)
     * [Fieldset](#id8.3)
     * [Form](#id8.4)
-9. []()
 ___
 
 <div id='id1'>
 
 ## **Primeros pasos**
+
+el primer documento de una pagina html debe ser **index.html**
+
+### Hola mundo
+```html
+<p>Hello Word..!</p>
+```
+
+### Partes de Html
+
+1. Simbolos que se abren y se cierran, estas se denominan etiquetas: 
+* p = párrafo  
+* a = vínculo
+2. Atributos, le da a las etiquetas caracteristicas especiales (title)
+3. Texto entre las etiquetas (Párrafo)
+4. Cometarios <!-- -->
+
+```html
+<!-- Este es un comentario -->
+<p title="Nota">Párrafo</p>
+```
+5. Entidades de caracteres:  
+* &copy;  
+* &cap;  
+* &coprod;
+
+Una pagina web tiene una estructura de una arbol.
 
 <div id='id2'>
 
