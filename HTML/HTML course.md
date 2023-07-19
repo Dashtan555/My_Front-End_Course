@@ -5,7 +5,15 @@
 1. [Primeros pasos](#id1)
 2. [Texto](#id2)
     * [Encabezado](#id2.1)
+    * [Listas](#id2.2)
+    * [Formatos](#id2.3)
+    * [Citas](#id2.4)
+    * [Tiempo](#id2.5)
 3. [Navegación](#id3)
+    * [Vínculos](#id3.1)
+    * [Rutas](#id3.2)
+    * [Navegación](#id3.3)
+    * [Barras](#id3.4)
 4. [Imágenes](#id4)
 5. [Multimedia](#id5)
     * [iFrame](#id5.1)
@@ -40,34 +48,34 @@ el primer documento de una pagina html debe ser **index.html**
 ### Partes de Html
 
 1. Simbolos que se abren y se cierran, estas se denominan etiquetas: 
-* p = párrafo  
-* a = vínculo
+* `<p>` = párrafo  
+* `<a>` = vínculo
 2. Atributos, le da a las etiquetas caracteristicas especiales (title)
 3. Texto entre las etiquetas (Párrafo)
-4. Cometarios <!-- -->
+4. `<!-- -->` Cometarios 
 
 ```html
 <!-- Este es un comentario -->
 <p title="Nota">Párrafo</p>
 ```
 5. Entidades de caracteres:  
-* &copy;  
-* &cap;  
-* &coprod;
+* `&copy;` : &copy;  
+* `&cap;` : &cap;  
+* `&coprod;` : &coprod;
 
-Una pagina web tiene una estructura de una arbol.
+Una pagina web tiene una estructura de una árbol.
 
 <div id='id2'>
 
 ## **Texto**
 
-Simple texto, cada vez que uso la etiqueta p, salta a otra línea, el objetivo de HTML no es dar apariencia, sino mas bien dar **relevancia o significado** a los diferentes elementos y textos de una pagina web.
+Simple texto, cada vez que uso la etiqueta p, salta a otra línea, el objetivo de HTML no es dar apariencia, sino mas bien dar **estructura, relevancia o significado** a los diferentes elementos y textos de una pagina web.
 
-* em: enfasis.
-* i: cursiva.
-* b: bold, para llamar la atención.
-* strong: importancia del contenido.
-* small: representa un texto mas pequeño.
+* **`<em>`**: enfasis.
+* **`<i>`**: cursiva.
+* **`<b>`**: bold, para llamar la atención.
+* **`<strong>`**: importancia del contenido.
+* **`<small>`**: representa un texto mas pequeño.
 
 ```html
 <p>Simple Párrafo</p>
@@ -88,7 +96,7 @@ En **HTML** no es sensible a las mayusculas o minusculas en su programación
 <div id='id2.1'>
 
 * ### **Encabezado**
-Etiquetas muy importantes que indican los títulos y subtítulos de la pagina web, da diferente significado a cada texto, sirve para ubiar al buscador como google, bing.
+Etiquetas muy importantes que indican los títulos `<h1> Título </h1>` y subtítulos de la pagina web, da diferente significado a cada texto, sirve para ubiar al buscador como google, bing.
 
 ```html
 <h1>Título</h1>
@@ -103,9 +111,12 @@ Etiquetas muy importantes que indican los títulos y subtítulos de la pagina we
 
 * ### **Listas**
 Para generación de listas
-* ul: lista desordenada
-* li: item de lista
-* ol: listas ordenadas
+* **`<ul>`**: lista desordenada
+* **`<ol>`**: listas ordenadas
+* **`<li>`**: item de lista
+* **`<dt>`**: lista de definición
+* **`<dd>`**: definición de la lista
+
 ```html
 <!-- Listas desordenadas -->
 <ul>
@@ -135,33 +146,143 @@ Para generación de listas
 <div id='id2.3'>
 
 * ### **Formatos**
+Etiquetas que da formato
+* `<code> </code>`: indica que es un codigo.
+* `&lt; text &gt;`: para indicar ejemplos de código
+* `<br />`: rotura de línea
+* `<sub> </sub>`: subíndice
+* `<sup> </sup>`: superíndice
 
 ```html
-<!-- Este es un comentario -->
-<p title="Nota">Párrafo</p>
+<p>Utiliza este código en CSS
+    <code>{ background: blue; }</code>
+</p>
+
+<p>Utiliza este código en HTML:
+    <code>&lt;body&gt;</code>
+</p>
+
+<!-- Esto muestra en una sola línea, pero al colocar <br> hace el salto -->
+
+<p>Quiero
+    ver
+    esto <br/>
+    en <br/>
+    muchas <br/>
+    líneas
+</p>
+
+<!-- Subíndice y super índice -->
+<p>CO<sub>2</sub></p>
+<p>n<sup>2</sup></p>
+<p>Referencia a un libro.<sup>1</sup></p>
 ```
 
 <div id='id2.4'>
 
 * ### **Citas**
+Estas etiquetas se utiliza para citar a otros autores
+* `<blockquote> </blockquote>`: cita en bloque
+* `<q> </q>`: cita en línea, debe estar dentro de un `<p>`
+
 
 ```html
-<!-- Este es un comentario -->
-<p title="Nota">Párrafo</p>
+<!-- Cita en bloque-->
+<blockquote>
+    <p>La mediocirdad para algunos es normal, la locura es poder ver más allá</p>
+    <cite>Charly García</cite>
+<!-- Cita en línea-->
+    <p> Jóse Mujica dijo:
+        <q>Ser libre es gastar la mayor cantidad de tiempo de nuestra bida en aquello que nos gusta hacer. </q>
+    </p>
+</blockquote>
 ```
 
 <div id='id2.5'>
 
 * ### **Tiempo**
+Etiquetas relacionadas con el tiempo y las fechas.
+Atributo:
+* `<time datetime="">`: Atributo en el cual se puede incluir una fecha.
+* `<datetime="10:00:00-0800">`: (0800) zona horaria 
 
 ```html
-<!-- Este es un comentario -->
-<p title="Nota">Párrafo</p>
+<p>
+    <time datetime="2024-04-20">Sábado</time>
+    a las
+    <time datetime="16:20:00.5-08:00">4:20</time>
+</p>
+
+<p>Nos veos a las 
+    <time datetime="2024-04-20 10:00:00-0800">10</time>
+</p>
 ```
 
 <div id='id3'>
 
 ## **Neavegación**
+Para la navegación dentro de la pagina web existen diferentes maneras:
+
+<div id='id3.1'>
+
+* ### **Vínculos**
+Sirve para redireccionar a otros lugares, u otras páginas
+* **`<a>`**: vínculos, atributo `href=""`, donde se puede icluir la dirección de otra pagina u otro elemento
+```html
+<a href="blog.html">Ir a la página del blog</a>
+```
+
+<div id='id3.2'>
+
+* ### **Rutas**
+  * **Vínculo relativo**: Es cuando se usa la barra oblicua / dos punto (..) significa ir a la carpeta padre, poner un solo punto (.) significa la carpeta presente.
+  * **Vínculo absoluto**: Es aquel incluye la dirección completa.
+
+
+```html
+<!-- Vínculo relativo -->
+<a href="./blog.html">Ir a la página del blog</a>
+<!-- Vínculo absoluto -->
+<a href="https://www.google.com/">Ir a Google</a>
+```
+
+<div id='id3.3'>
+
+* ### **Navegación**
+Consiste en el metodo de referenciar a las diferentes paginas creadas para estar apuntando en varias direcciones y asi lograr que el usuario pueda bavegar facilmente en nuestro sitio web, a tráves de los vinculos relativos u absolutos.
+
+<div id='id3.4'>
+
+* ### **Barras**
+Barras de navegación, con diferentes viculos.  
+* **`<nav> </nav>`**: Delimita una área de navegación. 
+* **`<footer> </footer>`**: Es otro tipo de barra de navegación pero esta representa un pie de página.   
+Contiene algunos atributos:  
+    * **`<nav role="navigation">`**: Se puedes usar de varios roles.
+    * **`<nav aria-label="Menú principal"">`**: Da nombre a esta etiqueta.
+
+```html
+<nav role="navigation" aria-label="Menú Principal">
+    <a href="midominio.com">Hoga</a>
+    <a href="midomini.com/blog.html">Blog</a>
+    <a href="midominio.com/sections/about.html">Acerca De</a>
+</nav>
+
+<!-- Para no incluir tanto código -->
+<nav role="navigation" aria-label="Menú Principal">
+    <a href="/">Hoga</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/sections/about.html">Acerca De</a>
+</nav>
+<!--  Otro tipo de barra de navegación/especifico para un pie de página -->
+
+<footer>
+    <a href="/">Hoga</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/sections/about.html">Acerca De</a>
+</footer>
+
+```
 
 <div id='id4'> 
 
