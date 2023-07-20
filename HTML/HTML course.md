@@ -15,8 +15,14 @@
     * [Navegación](#id3.3)
     * [Barras](#id3.4)
 4. [Imágenes](#id4)
+    * [Imagen](#id4.1)
+    * [Resolución](#id4.2)
+    * [Figura](#id4.3)
+    * [Foto](#id4.4)
 5. [Multimedia](#id5)
-    * [iFrame](#id5.1)
+    * [Audio](#id5.1)
+    * [Video](#id5.2)
+    * [iFrame](#id5.3)
 6. [Contenido](#id6)
     * [Etiqueta de Bloque (div)](#id6.1)
     * [Etiqueta de Bloque (Span)](#id6.2)
@@ -38,20 +44,23 @@ ___
 
 ## **Primeros pasos**
 
-el primer documento de una pagina html debe ser **index.html**
+El primer documento de una pagina html debe ser **index.html**
 
 ### Hola mundo
+Este es un código sencillo, que representa partes de lenguaje **HTML**, es un **Hola mundo**, para quién no este familiarizado con este termino, es una iniciación en el desarrollo del software.
+
 ```html
 <p>Hello Word..!</p>
 ```
 
 ### Partes de Html
 
-1. Simbolos que se abren y se cierran, estas se denominan etiquetas: 
-* `<p>` = párrafo  
-* `<a>` = vínculo
-2. Atributos, le da a las etiquetas caracteristicas especiales (title)
-3. Texto entre las etiquetas (Párrafo)
+1. Simbolos `< >` que se abren y se cierran, estos se denominan etiquetas: 
+`<p>`: APertura de una etiqueta, `</p>` cierre de una etiqueta, no todas las etiquetas se cierran como por ejemplo: `<br/>` esta es para dar un salto de línea y así ya esta completa.
+* **`<p> </p>`** = párrafo  
+* **`<a> </a>`** = vínculo
+2. Atributos, le da a las etiquetas caracteristicas especiales como (title) `<p title="Nota"> </p>`
+3. Texto entre las etiquetas `<p>Aquí va el texto de la etiqueta.</p>`
 4. `<!-- -->` Cometarios 
 
 ```html
@@ -59,9 +68,9 @@ el primer documento de una pagina html debe ser **index.html**
 <p title="Nota">Párrafo</p>
 ```
 5. Entidades de caracteres:  
-* `&copy;` : &copy;  
-* `&cap;` : &cap;  
-* `&coprod;` : &coprod;
+* **`&copy;`** : &copy;  
+* **`&cap;`** : &cap;  
+* **`&coprod;`** : &coprod;
 
 Una pagina web tiene una estructura de una árbol.
 
@@ -96,7 +105,7 @@ En **HTML** no es sensible a las mayusculas o minusculas en su programación
 <div id='id2.1'>
 
 * ### **Encabezado**
-Etiquetas muy importantes que indican los títulos `<h1> Título </h1>` y subtítulos de la pagina web, da diferente significado a cada texto, sirve para ubiar al buscador como google, bing.
+Etiquetas muy importantes que indican los títulos `<h1> Título </h1>` y subtítulos de la pagina web, da diferente significado a cada texto, sirve para ubicar al buscador como google, bing.
 
 ```html
 <h1>Título</h1>
@@ -191,6 +200,7 @@ Estas etiquetas se utiliza para citar a otros autores
 <blockquote>
     <p>La mediocirdad para algunos es normal, la locura es poder ver más allá</p>
     <cite>Charly García</cite>
+
 <!-- Cita en línea-->
     <p> Jóse Mujica dijo:
         <q>Ser libre es gastar la mayor cantidad de tiempo de nuestra bida en aquello que nos gusta hacer. </q>
@@ -242,6 +252,7 @@ Sirve para redireccionar a otros lugares, u otras páginas
 ```html
 <!-- Vínculo relativo -->
 <a href="./blog.html">Ir a la página del blog</a>
+
 <!-- Vínculo absoluto -->
 <a href="https://www.google.com/">Ir a Google</a>
 ```
@@ -249,7 +260,7 @@ Sirve para redireccionar a otros lugares, u otras páginas
 <div id='id3.3'>
 
 * ### **Navegación**
-Consiste en el metodo de referenciar a las diferentes paginas creadas para estar apuntando en varias direcciones y asi lograr que el usuario pueda bavegar facilmente en nuestro sitio web, a tráves de los vinculos relativos u absolutos.
+Consiste en el metodo de referenciar a las diferentes páginas creadas para estar apuntando en varias direcciones y asi lograr que el usuario pueda bavegar facilmente en nuestro sitio web, a tráves de los vinculos relativos u absolutos.
 
 <div id='id3.4'>
 
@@ -274,8 +285,8 @@ Contiene algunos atributos:
     <a href="/blog.html">Blog</a>
     <a href="/sections/about.html">Acerca De</a>
 </nav>
-<!--  Otro tipo de barra de navegación/especifico para un pie de página -->
 
+<!--  Otro tipo de barra de navegación/especifico para un pie de página -->
 <footer>
     <a href="/">Hoga</a>
     <a href="/blog.html">Blog</a>
@@ -288,14 +299,107 @@ Contiene algunos atributos:
 
 ## **Imágenes**
 
+Como agregar un archivo de imagen, las imagnes  archivos no deben ser muy pesados para que la renderización de la página web sea rapida y efectiva, admite achivos como:  
+* jpeg
+* jpg
+* png
+* svg
+* gif
+
+<div id='id4.1'>
+
+* ### **Img**
+La etqueta **`<img/>`** que representa una imagen, y se debe colocar el atributo:
+* **`<img src=""/>`**: Fuente de la imagen
+* **`<img alt=""/>`**: Texto alternativo de la imagen
+* **`<img width=""/>`**: Parametro de ancho de la imagen 
+* **`<img height=""/>`**: Parametro de alto de la imagen
+
+```html
+<body>
+    <img src="./arches.jpeg" alt="Arches" width="300" height="200"/>
+</body>
+```
+
+<div id='id4.2'>
+
+* ### **Resolución**
+Este atributo **`<img srcset=""/>`**permite elegir el tamaño de imagen que necesitemos se muestre dependiendo de la resolución de la pantalla en la página web.
+
+```html
+<body>
+    <img src="./arches.jpeg" alt="Arches" width="300" height="200" srcset="./arches-600.jpg 2x, ./arches-1200.jpg 3x"/>
+</body>
+```
+
+<div id='id4.3'>
+
+* ### **Figure**
+**`<figuere> </figure>`** en esta etiqueta se puede colocar la etiqueta **`<figcaption> </figcaption>`** se puede incluir una imagen y un caption, un subtítulo, ayuda a la semantica a los buscadores.
+
+```html
+<figure>
+    <img src="./arches.jpeg" alt="Arches" width="300" height="200" srcset="./arches-600.jpg 2x, ./arches-1200.jpg 3x"/>
+    <figcaption>Estes es el subtítulo de la imagen</figcaption>
+</figure>
+```
+
+<div id='id4.4'>
+
+* ### **Picture**
+**`<picture> </picture>`** en esta etioqueta tiene mas etiquetas que nos permite indicar las diferentes fuentes de donde proviene nuestra imagen, y tambien se puede colocar un atributo **`<source media="">`** en el cual nos permite indicar en que tamaño del navegador vamos a mostrar diferentes tipos de imagenes.
+
+```html
+<picture>
+    <source media="(min-width:1200px)" srcset="./arches-1200.jpg">
+    <source media="(min-width:600px)" srcset="./arches-600.jpg">
+    <img src="./arches.jpeg" alt="Arches" width="300" srcset="./arches-600.jpg 2x, ./arches-1200.jpg 3x"/>
+</picture>
+```
+
 <div id='id5'>
 
 ## **Multimetimedia**
+En las páginas web tambien podemos incluir audio, videos; objetos multimedia.
 
 <div id='id5.1'>
 
+* ### **Audio**
+**`<audio> </audio>`** nos permite colocar audio en nuestras páginas web, y este tambien tiene una serie de atributos muy utiles.
+* **controls**: no se debe colocar qeu valor es, y representa los controles
+* **src**: se coloca la dirección del audio
+* **loop**: permite hacer un lazo del audio
+* **autoplay**: esto permite reproducir, ni bien se entra en una página.
+
+```html
+<audio controls src="audiomp3" loop autoplay>
+    <source src="audio.mp3" type="audio/mpeg">
+    <source src="audio.ogg" type="audio/ogg; codec=opus">
+    Los sentimos. Tú navegador no soporta este formato.
+</audio>
+```
+
+<div id='id5.2'>
+
+* ### **Video**
+La etiqueta **`<video> </video>`** funciona de manera muy similar a la de audio, y esta representa un video. 
+
+```html
+<video controls src="audiomp3" loop autoplay>
+    <source src="video.mp4" type="video/mp4">
+    Los sentimos. Tú navegador no soporta este formato.
+</video>
+```
+
+<div id='id5.3'>
+
 * ### **iFrame**
-Permite poner contenido de otros sitios web en mi página
+Permite poner contenido de otros sitios web en tú página, se puede incluir algunos atributos como:
+* **width**: Ancho
+* **height**: Anltura
+* **src**: Fuente
+* **frameborder**: El tamaño del borde
+
 ```html
 <!-- De Google Maps, Youtube, Facebook -->
 <iframe width ="560" heigth ="315" src="https://www.youtube.com/embed/8BZp6Of6KK0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -308,9 +412,9 @@ Permite poner contenido de otros sitios web en mi página
 <div id='id6'>
 
 ## **Contenedores**
-1. < div>  se utilza par agrupar etiquetas
-2. < span> se utilza para un grupo mas pequeño de una o más palabras junto con atributos
-3. < p>    se uza como un contenedor de un grupo de texto
+1. **`<div> </div>`** se utilza par agrupar etiquetas, y formar bloques en diferentes líneas
+2. **`<span> </span>`** se utilza para un grupo mas pequeño de una o más palabras junto con atributos
+3. **`<p> </p>`**    se uza como un contenedor de un grupo de texto
 
 <div id='id6.1'>
 
@@ -340,11 +444,13 @@ Etiqueta de bloque pero separa en lineas y no en bloque, cualquier información 
 <div id='id6.3'>
 
 * ### **Atributos globales**
-    * *id* Identificación unica / para identificar una etiqueta, identificar parrafo, mas usado con CSS, solo para una etiqueta sola
-    * *class* Parecido al anterior pero sirve para identificar algun grupo, se puede rusar.
-    * *contenteditable* Puedes editar este contenido
-    * *lang* Indica el lenguaje del contenigo es-Españo, en-English, es-MX español de Mexico, ayuda a Google a encontrar la página
-    * *dir* Indica la dirección "rtl" right to left de izaquierda a derecha, para escritos en arabe por ejemplo.
+Se puede usar en cualquier tipo de etiqueta:  
+
+   * **id** Identificación unica / para identificar una etiqueta, identificar parrafo, mas usado con CSS, solo para una etiqueta sola
+   * **class** Parecido al anterior pero sirve para identificar algun grupo, se puede rusar.
+   * **contenteditable** Puedes editar este contenido
+   * **lang** Indica el lenguaje del contenigo es-Españo, en-English, es-MX español de Mexico, ayuda a Google a encontrar la página
+   * **dir** Indica la dirección "rtl" right to left de izaquierda a derecha, para escritos en arabe por ejemplo.
 
 ```html
 <!-- Ejemplo de Atributos globales-->
