@@ -230,7 +230,7 @@ Atributo:
 
 <div id='id3'>
 
-## **Neavegación**
+## **Navegación**
 Para la navegación dentro de la pagina web existen diferentes maneras:
 
 <div id='id3.1'>
