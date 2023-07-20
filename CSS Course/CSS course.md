@@ -5,12 +5,12 @@
     * [Partes de CSS](#id1.1)
     * [Usos](#id1.2)
     * [Resets](#id1.3)
-2. [Texto](#id2)
-    * [Encabezado](#id2.1)
-    * [Listas](#id2.2)
-    * [Formatos](#id2.3)
-    * [Citas](#id2.4)
-    * [Tiempo](#id2.5)
+2. [Fundamentos](#id2)
+    * [Sintaxis](#id2.1)
+    * [Selectores](#id2.2)
+    * [Cascada](#id2.3)
+    * [Especificidad](#id2.4)
+    * [Unidades](#id2.5)
 3. [Navegación](#id3)
     * [Vínculos](#id3.1)
     * [Rutas](#id3.2)
@@ -131,6 +131,92 @@ Se puede usar como ejemplo esto para estandarizar nuestros diseños en nuestros 
             <input id="tres" type="radio" value="Tres"/>
             <label for="tres">Tres</label>
         </fieldset>
+    </body>
+</html>
+```
+**Reto:** Crea un reset de CSS que establezca el margen y el relleno de todos los elementos en cero, y elimine la lista de viñetas predeterminada en los elementos de lista.
+El `*` es un selector universal que permite seleccionar todos lo elementos de una página web.
+
+```CSS
+/* Solución */
+*{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style: none;
+}
+```
+<div id='id2'>
+
+2. ## **Fundamentos**
+A continuación se nuestra como se debe presentar la información en archivos **CSS**.  
+<img src="./CSS_REFERENCE.jpg" height="300">
+
+<div id='id2.1'>
+
+* ### **Sintaxis**
+Aquí se denota como se puede usar el estilo en **CSS**, los comentarios estan formados por: `/*Comentarios*/`, en css es recomendable escribir para abajo dejando ver todos las declaraciones, y como se muestra en el ejemplo se puede añadir una clase para que sea un direccionador.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+            /* comentarios */
+            p.primero{
+                color: red;
+                font-size: 25px;
+            }
+            h1{
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Título</h1>
+        <p class="primero">Párrafo</p>
+    </body>
+</html>
+```
+<div id='id2.2'>
+
+* ### **Selectores**
+Selectores, son como `p` que indica a que etiqueta se va a aplicar el estilo o como el ejemplo de: `p.primero{}`, mostrado en el ejemplo anterior.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p{
+                color: blue;
+                font-size: 25px;
+            }
+            .claseTexto{
+                color: red;
+                font-size: 25px;
+            }
+            #textoUnico{
+                color: green;
+                font-size: 25px;
+            }
+            .claseTexto span{
+                color: purple;
+                font-size: 25px;
+            }
+            p, span{
+                text-decoration: underline;                
+            }
+
+        </style>
+    </head>
+    <body>
+        <p>Texto <span>1</span></p>
+        <p class="claseTexto">Texto <span>2</span></p>
+        <p class="claseTexto">Texto <span>3</span></p>
+        <p id="textoUnico">Texto <span>4</span></p>
     </body>
 </html>
 ```
