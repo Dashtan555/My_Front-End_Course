@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100%;
+        display: grid;
+        grid-template-columns: 100px auto;
+        grid-template-rows: 40px auto 100px;
+        gap: 10px;
+      }
+      nav,
+      aside,
+      main,
+      footer {
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      nav {
+        background: lightsalmon;
+        justify-content: space-around;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      aside {
+        background: violet;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+      main {
+        background: greenyellow;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+      footer {
+        background: lightseagreen;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/home">Hogar</a>
+      <a href="/more">Aprende</a>
+      <a href="/about">Acerca De</a>
+    </nav>
+    <aside>Contenido Lateral</aside>
+    <main>Contenido Principal</main>
+    <footer>
+      &copy; Xavier Reyes Ochoa 2025
+    </footer>
+  </body>
+</html>
