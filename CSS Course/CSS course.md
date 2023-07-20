@@ -111,3 +111,26 @@ Normalmente los archivos de estilo de css se llaman **styles.css** puede hacer d
 <div id='id1.3'>
 
 * ### **Resets**
+Nos permite resetear el fomato inicial de las páginas web, ya que en cada explorador se muestra de una manera diferente, ya que cada explorador tiene un formato diferente para mostrar las páginas web.
+
+Se puede usar como ejemplo esto para estandarizar nuestros diseños en nuestros proyectos cdnjs: https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    </head>
+    <body>
+        <fieldset>
+            <legend>Radio Buttons</legend>
+            <input id="uno" type="radio" value="Uno"/>
+            <label for="uno">Uno</label>
+            <input id="dos" type="radio" value="Dos"/>
+            <label for="dos">Dos</label>
+            <input id="tres" type="radio" value="Tres"/>
+            <label for="tres">Tres</label>
+        </fieldset>
+    </body>
+</html>
+```
