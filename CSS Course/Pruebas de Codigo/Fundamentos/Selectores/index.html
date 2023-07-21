@@ -21,7 +21,24 @@
             p, span{
                 text-decoration: underline;                
             }
-
+            div > h2{
+                color: #ff0000;
+                font-size: 50px;
+            }
+            div > p{
+                color: blue;
+                text-decoration: none;
+            }
+            div > button{
+                color: #00ff00;
+                padding: 5px;
+                background: #211e33;
+                border-radius: 5px;
+            }
+            div > p > span{
+                color: #73d7ff;
+                text-decoration: none;
+            }
         </style>
     </head>
     <body>
@@ -29,5 +46,12 @@
         <p class="claseTexto">Texto <span>2</span></p>
         <p class="claseTexto">Texto <span>3</span></p>
         <p id="textoUnico">Texto <span>4</span></p>
+        <div>
+            <h2>Selectores</h2>
+            <p>Esta es <span>una</span> prueba <span>de</span> selectores.</p>
+            <button>
+                Prueba realizada.
+            </button>
+        </div>
     </body>
 </html>

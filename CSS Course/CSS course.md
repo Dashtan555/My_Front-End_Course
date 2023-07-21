@@ -11,11 +11,8 @@
     * [Cascada](#id2.3)
     * [Especificidad](#id2.4)
     * [Unidades](#id2.5)
-3. [Navegación](#id3)
-    * [Vínculos](#id3.1)
-    * [Rutas](#id3.2)
-    * [Navegación](#id3.3)
-    * [Barras](#id3.4)
+3. [Texto](#id3)
+    * [Fuentes](#id3.1)
 4. [Imágenes](#id4)
     * [Imagen](#id4.1)
     * [Resolución](#id4.2)
@@ -184,6 +181,19 @@ Aquí se denota como se puede usar el estilo en **CSS**, los comentarios estan f
 
 * ### **Selectores**
 Selectores, son como `p` que indica a que etiqueta se va a aplicar el estilo o como el ejemplo de: `p.primero{}`, mostrado en el ejemplo anterior.
+Se puede aplicar varios selectores como:
+* **`p`**: selecciona la etiqueta de `p` = párrafo, existen más como: `h1`, `h2`, `q` entre ottros.
+* **`.claseTexto`** Selecciona todas las etiquetas indicadoras del la `class="claseTexto"` seleccionada.
+* **`#textoUnico`** Selecciona a una sola etiqueta identificada con el `id=textoUnico`, id se puede usar solo una vez que indica a un solo elemento.
+* **`.claseTexto span`** Selecciona la etiqueta `span` dentro de las etiquetas que tengas la `class=claseTexto`
+* **`p, span`** Selecciona todo los párrafos y span que se encuentren, llamado selector de grupo.
+* **`div > h2`**: Selecciona la etiqueta `h2` que es la hija de una etiqueta `div`.
+* **`button:hover`**: Selecciona el botón cuando el cursor está sobre el botón.
+* **`div::after`**: Selecciona una etiqueta 'ficticia' que se crea después de elemento `div`
+* **`p[title]`**: Selecciona a todas las etiquetas `p` que tienen el atributo title.
+
+Hay que tener en cuenta que los cambios se van leyendo de arriba a abajo siendo el ultimo cambio el que se muestra.
+
 
 ```html
 <!DOCTYPE html>
@@ -209,6 +219,17 @@ Selectores, son como `p` que indica a que etiqueta se va a aplicar el estilo o c
             p, span{
                 text-decoration: underline;                
             }
+            div > h2{
+                color:red;
+                font-size: 50px;
+            }
+            div > p{
+                color: blue;
+                text-decoration: none;
+            }
+            div > button{
+                color: green;
+            }
 
         </style>
     </head>
@@ -217,6 +238,139 @@ Selectores, son como `p` que indica a que etiqueta se va a aplicar el estilo o c
         <p class="claseTexto">Texto <span>2</span></p>
         <p class="claseTexto">Texto <span>3</span></p>
         <p id="textoUnico">Texto <span>4</span></p>
+        <div>
+            <h2>Selectores</h2>
+            <p>Esta es una prueba de selectores.</p>
+            <button>
+                Prueba realizada.
+            </button>
+        </div>
     </body>
 </html>
 ```
+
+<div id='id2.3'>
+
+* ### **Cascada** ### 
+En los archivos de las páginas web, se aplica los estilos en cascada, en el navegador primero se abre el archivo html, luego se aplican los estilos del archivo CSS en cascada, por lo cual se aplica al final el ultimo estilo definido, a continuación se presenta un ejemplo:
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+        <style>
+            p{
+                color: red;
+            }
+        </style>
+
+    </head>
+    <body>
+        <p style="color: green">Estos son ejemplos de la aplicación del diseño en cascada.</p>
+    </body>
+</html>
+```
+Los estilos aplicados a las etiquetas padres, se pasan directamente a las clases hijo.  
+
+**Resultado:**
+
+<img src="./Pruebas de Codigo/Fundamentos/Cascada/cascada.png"/>
+
+<div id='id2.4'>
+
+* ### **Especificidad**
+Esta sirve en una forma distinta de cascada, ya que da importancia en un sentido contrario al de cascada, dando mayor importancia a la especificidad con la que se apunte a los diferentes elementos.
+Señalando de la siguientes manera:
+* **`.`**: Para las `class`
+* **`#`**: Para los `id`
+* **`p.textos#textos1`**: Para un `id` en una `class` de una etiqueta `p`
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p.textos#texto1{
+                color: blue !important;
+            }
+            p.textos#texto1{
+                color: green;
+            }
+            #texto1 {
+                color: yellow;
+            }
+            .textos{
+                color: orange;
+            }
+            p{
+                color: red;
+            }
+            body{
+                color: purple;
+                font-size: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="texto1" class="textos">Texto de prueba</p>
+    </body>
+</html>
+```
+
+<img src="./Pruebas de Codigo/Fundamentos/Especificidad/especificidad.png" height="120">
+
+<div id='id2.5'>
+
+* ### **Unidades**
+Las unidades ayudan a dar formato en las páginas web, el fin es hacer las páginas mas resposivas y adaptivas, teniendo en cuenta la cantidad enorme que existen en el mercado.
+
+|Unidades       | Tipo            |Pantalla  |
+|---------------|---------------- |   -------|
+|pixeles        | Unidad absoluta |Se asegura que deve ocupar los pixeles destinados para esa pantalla.        |
+|porcentaje     | Valor relativo|Este es un valor relativo al padre, en el caso del ejemplo al `<body>`, si el padre cambia, de igual manera el hijo.  |
+|3em            | Unidad relativa       | Es una unidad relativa al font-size del padre, y es utilizado para 'Fuentes'   |
+|3rem           | Unidad relativa        | Esta es una unidad relativa a la raíz, lo que determina el navegador. Raíz = `<html>`   |
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html{
+                font-size: 10px;
+            }
+            body{
+                margin: 0;
+                font-size: 50%;
+                width: 100%;
+            }
+            h1{
+                background: greenyellow;
+                /* px Absioluta */
+                width: 300px;
+                /* relativa al tamaño del padre */
+                width: 6%;
+                /* em Relativa a font-size del padre */
+                font-size: 3em;
+                /* rem Relativa a font-size de la raíz */
+                font-size: 3rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Unidades</h1>
+    </body>
+</html>
+```
+
+**Resultado:**  
+<img src='./Pruebas de Codigo/Fundamentos/Unidades/Unidades.png'>
+
+<div id='id3'>
+
+* ## **Texto**
+
+<div id='id3.1'>
+
+ * ### **Fuentes**
