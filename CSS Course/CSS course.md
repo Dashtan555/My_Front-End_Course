@@ -369,7 +369,11 @@ Las unidades ayudan a dar formato en las páginas web, el fin es hacer las pági
 
 <div id='id3'>
 
-* ## **Texto**
+3. ## **Texto**
+Las fuentes para el texto se usan mucho para dar un estilo, identidad a una página web. existen varios recurso pero uno que se puede usar es:
+
+[**Google fonts**](https://fonts.google.com/ "Fuentes de Google")
+
 
 <div id='id3.1'>
 
