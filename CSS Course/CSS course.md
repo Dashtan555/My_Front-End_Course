@@ -13,35 +13,34 @@
     * [Unidades](#id2.5)
 3. [Texto](#id3)
     * [Fuentes](#id3.1)
-4. [Imágenes](#id4)
-    * [Imagen](#id4.1)
-    * [Resolución](#id4.2)
-    * [Figura](#id4.3)
-    * [Foto](#id4.4)
-5. [Multimedia](#id5)
-    * [Audio](#id5.1)
-    * [Video](#id5.2)
-    * [iFrame](#id5.3)
-6. [Contenido](#id6)
-    * [Etiqueta de Bloque (div)](#id6.1)
-    * [Etiqueta de Bloque (Span)](#id6.2)
-    * [Atributos globales](#id6.3)
-    * [Accesibilidad](#id6.4)
-7. [Estructura](#id7)
-    * [DOCTYPE](#id7.1)
-    * [head](#id7.2)
-    * [body](#id7.3)
-    * [table](#id7.4)
-8. [Formularios](#id8)
-    * [Input](#id8.1)
-    * [Textarea](#id8.2)
-    * [Fieldset](#id8.3)
-    * [Form](#id8.4)
+4. [Modelo de Caja](#id4)
+    * [Caja](#id4.1)
+    * [Margen y Relleno](#id4.2)
+    * [Borde](#id4.3)
+    * [Contorno](#id4.4)
+5. [Estilos](#id5)
+    * [Fondo](#id5.1)
+    * [Color](#id5.2)
+6. [Layouts](#id6)
+    * [Layouts](#id6.1)
+    * [Prefijos](#id6.2)
+    * [Posiciones](#id6.3)
+    * [Floats](#id6.4)
+    * [Flexbox](#id6.4)
+    * [Grid](#id6.4)
+7. [Dise;o Receptivo](#id7)
+    * [Media Query](#id7.1)
+    * [Móvil primero](#id7.2)
+8. [Complementos](#id8)
+    * [Transiciones](#id8.1)
+    * [Transformaciones](#id8.2)
+    * [Animaciones](#id8.3)
+    * [Centrar](#id8.4)
 
 ___
 <div id='id1'>
 
-1. ## **Primeros Pasos**
+## **1. Primeros Pasos**
 CSS sirve para dar estilo a nuestras páginas web.
 
 <div id='id1.1'>
@@ -146,7 +145,7 @@ ul{
 ```
 <div id='id2'>
 
-2. ## **Fundamentos**
+## **2. Fundamentos**
 A continuación se nuestra como se debe presentar la información en archivos **CSS**.  
 <img src="./CSS_REFERENCE.jpg" height="300">
 
@@ -369,7 +368,7 @@ Las unidades ayudan a dar formato en las páginas web, el fin es hacer las pági
 
 <div id='id3'>
 
-3. ## **Texto**
+## **3. Texto**
 Las fuentes para el texto se usan mucho para dar un estilo, identidad a una página web. existen varios recurso pero uno que se puede usar es:
 
 [**Google fonts**](https://fonts.google.com/ "Fuentes de Google")
@@ -378,3 +377,65 @@ Las fuentes para el texto se usan mucho para dar un estilo, identidad a una pág
 <div id='id3.1'>
 
  * ### **Fuentes**
+  En todo documento existe texto, este texto va a tener un tipo de letra o diseño a este tipo de letra o diseño se le llama fuente o font, cual sirve para dar diferentes sensaciones en tú página web.
+
+ **`font-family`** Aquí se presenta la familia de fuentes, en la cual la primera opción es un tipo de letra única o muy especifica, sino encuentra el navegador, da paso a la siguiente y al final busca una familia de fuentes.
+
+* serif. Con detalles en las letras
+* sans-serif. simples
+* monospace: un mismo espacio entre letras
+* cursive: cursiva
+* fantasy: algo epico y fantasioso.
+
+**`font-weight`** Esta se refiere al ancho de las letras, se puede usar desde `100` o `900`siendo 900 el ancho maximo o se puede usar palabras claves como: `bold`, `lighter`, `normal`, y otros.  
+
+Para ver cambios uno se debe asegurar que la familia de fuentes tiene los diferentes grosores, sino no se va a aplicar ningun cambio.  
+
+**`font-style`** En esta existen diferentes propiedades como: `normal`, `oblique`, `italic`.
+
+Se debe tener en cuenta que las fuentes son archivos que incluyen todas las imagnes de cada uno de los caracteres, si no existe alguna propiedad no se aplica cambios.
+
+**`font-size`** Esta propiedad permite el cambio del tamaño de la fuente.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+            p{
+                font-family: 'Ubuntu Mono', monospace;
+                font-weight: lighter;
+                font-style: oblique;
+                font-size: 25px;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <p>
+            Este es un texto de prueba: Mientras los actores siguen en huelga, uno de los problemas es la posibilidad de que los estudios acaben con sus trabajos de actuación gracias a la inteligencia artificial. CNN conversó con la empresa MARZ, especializada en efectos visuales a través de inteligencia
+        </p>
+    </body>
+</html>
+```
+
+**Resultado:**
+<img src='./Pruebas de Codigo/Fuentes/Fuentes.png'>
+
+<div id='id4'>
+
+ ## **4. Modelo de Caja (Box Model)**
+
+<div id='id4.1'>
+
+Cada elemento de html puede ser en forma de bloque o de linea, son como pequeñas cajas que guardan información dentro.
+
+* `<div>`: elemnto de bloque.
+* `<span>`: elemento de línea.
+
+* ### **Caja**
