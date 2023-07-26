@@ -431,11 +431,58 @@ Se debe tener en cuenta que las fuentes son archivos que incluyen todas las imag
 
  ## **4. Modelo de Caja (Box Model)**
 
-<div id='id4.1'>
-
+ 
 Cada elemento de html puede ser en forma de bloque o de linea, son como pequeñas cajas que guardan información dentro.
 
 * `<div>`: elemnto de bloque.
 * `<span>`: elemento de línea.
 
+<div id='id4.1'>
+
 * ### **Caja**
+A continuación se muestra una imagen que simboliza a las cajas que representan cada elemento de **HTML**.
+
+<img src='./Pruebas de Codigo/Box Model/Caja/imagen referencia caja.jpg'>
+
+Para dar formato a cada uno de estos elementos existen diferentes propiedades como:
+
+* `background-color`: Para dar color a la caja.
+* `padding`: Que da un espacio que se da entre el contenido y la caja.
+* `border`: Borde la caja se puede añadir más propiedades como, que puede ser `solid` o `dasehd` y hasta color del borde.
+* `margin`: Espacio al rededor de la caja.
+* `width`: Puede tener un ancho usado con esta propiedad
+* `height`: Puede cambiarse el alto
+* `box-sizing`: `content-box`, signifíca que la caja va a tener el tamaño del contenido, o `border-box` esta propiedad considera al borde y al padding.
+
+Los elementos de línea o de bloque actuan diferente, sin embargo podemos hacer que actue como un elemento de bloque o de línea.
+* `display`: Aquí podemos cambiar el comportamiento de los elementos como: `block`; bloque, `line`; línea, `inline-block`; es una propiedad intermedia.
+Todo esto se debe tener encuenta al usar altura y ancho dependiendo de los diferentes objetivos del proyecto.
+
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+            }
+            div{
+                background-color: red;
+                padding: 10px;
+                border: 10px solid blue;
+                margin: 20px;
+                width: 100px;
+                height: 100px;
+                box-sizing: content-box;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>Box Model</div>
+    </body>
+</html>
+```
+**Resultado:**  
+<img src='./Pruebas de Codigo/Box Model/Caja/Box.png' height='200'>
