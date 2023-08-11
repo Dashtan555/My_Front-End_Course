@@ -12,14 +12,14 @@
     * [Especificidad](#id2.4)
     * [Unidades](#id2.5)
 3. [Texto](#id3)
-    * [Fuentes](#id3.1)
+    * [Fuentes - Fonts](#id3.1)
 4. [Modelo de Caja](#id4)
     * [Caja](#id4.1)
     * [Margen y Relleno](#id4.2)
-    * [Borde](#id4.3)
-    * [Contorno](#id4.4)
+    * [Borde - Border](#id4.3)
+    * [Contorno - Outline](#id4.4)
 5. [Estilos](#id5)
-    * [Fondo](#id5.1)
+    * [Fondo - Background](#id5.1)
     * [Color](#id5.2)
 6. [Layouts](#id6)
     * [Layouts](#id6.1)
@@ -447,8 +447,8 @@ A continuación se muestra una imagen que simboliza a las cajas que representan 
 Para dar formato a cada uno de estos elementos existen diferentes propiedades como:
 
 * `background-color`: Para dar color a la caja.
-* `padding`: Que da un espacio que se da entre el contenido y la caja.
-* `border`: Borde la caja se puede añadir más propiedades como, que puede ser `solid` o `dasehd` y hasta color del borde.
+* `padding`: Que da un espacio que se da entre el contenido y la caja. (Borde interno)
+* `border`: Borde la caja se puede añadir más propiedades como, que puede ser `solid` o `dashed` y hasta color del borde.
 * `margin`: Espacio al rededor de la caja.
 * `width`: Puede tener un ancho usado con esta propiedad
 * `height`: Puede cambiarse el alto
@@ -475,6 +475,7 @@ Todo esto se debe tener encuenta al usar altura y ancho dependiendo de los difer
                 width: 100px;
                 height: 100px;
                 box-sizing: content-box;
+                display: inline-block;
             }
 
         </style>
@@ -486,3 +487,236 @@ Todo esto se debe tener encuenta al usar altura y ancho dependiendo de los difer
 ```
 **Resultado:**  
 <img src='./Pruebas de Codigo/Box Model/Caja/Box.png' height='200'>
+
+ <div id='id4.2'>
+
+* ### **Margen y Relleno**
+A continuación se muestra como se deben manejar los valores de `padding` y `margin`, esto depende de las especificaciones que le queramos dar o el lugar dentro la página web.
+* **Arriba Derecha Abajo Izquierda**: Si cuenta con las 4 variables `padding: 100px 20px 30px 80px; `
+* **Arriba Derecha-Izquierda Abajo**: Si solo se cuenta con 3 variables `padding: 100px 40px 30px;`    
+* **Arriba-Abajo Derecha-Izquierda**: Si cuenta con 2 variables `padding: 100px 40px;`
+* **Arriba-Abajo-Izquierda-Derecha**: Si cuenta con 1 variable `padding: 10px;`
+
+**Nota**: Esto ocurre de manera similar en `margin`.
+
+#### Margen y Relleno
+Adicionalmente se puede indicar cada propiedad individualmente sin usar la forma abreviada.
+
+**Margen**  
+* `margin-top`: Arriba
+* `margin-right`: Derecha
+* `margin-bottom`: Abajo
+* `margin-left`: izquierda
+
+**Relleno**
+* `padding-top`: Arriba
+* `padding-right`: Derecha
+* `padding-bottom`: Abajo
+* `padding-left`: Izquierda
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+            }
+            div, span{
+                background: red;
+                /* Arriba Derecha Abajo Izquierda*/
+                /* padding: 100px 20px 30px 80px; */
+                /* Arriba Derecha-Izquierda Abajo*/
+                /* padding: 100px 40px 30px; */
+                /* Arriba-Abajo Derecha-Izquierda */
+                /* padding: 100px 40px; */
+                /* Arriba-Abajo-Izquierda-Derecha */
+                padding: 10px;
+
+                margin: 1px 20px 40px 5px;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div>BOX MODEL</div> -->
+        <span>BOX MODEL</span>
+        <span>BOX MODEL</span>
+        <span>BOX MODEL</span>
+        <span>BOX MODEL</span>
+    </body>
+</html>
+```
+
+**Resultado:**  
+<img src='./Pruebas de Codigo/Box Model/Margen y Relleno/MargenyRelleno.png' height='200'>
+
+<div id='id4.3'>
+
+* ### **Borde**
+Se presenta las diferentes caracteristicas que tiene la etiqueta `border`, que al igual que margen y relleno, está se puede desconponer en varias partes:
+
+	border-top, border-right, border-bottom, border-left
+
+* **`border-style`**: Para el estilo del borde
+* **`border-color`**: Para el color
+* **`border-width`**: Para el ancho del borde.
+
+Así mismo se puede aplicar independientemente para las diferentes posiciones del borde:
+
+* **`border-top-style`**: Estilo Superior
+* **`border-bottom-style`**: Estilo Inferior
+* **`border-right-style`**: Estilo de la Derecha
+* **`border-left-style`**: Estilo de la Izquierda
+
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            span {
+                display: inline-block;
+                border: red 15px solid;
+                border-style: dashed solid ridge inset;
+                border-color: red gray blue green;
+                border-width: 15px 2px 8px 20px;
+
+                border-top-style: dotted;
+                border-bottom-color: blueviolet;
+                border-left-width: 50px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <span>BOX MODEL</span>
+    </body>
+</html>
+```
+
+**Resultado:**  
+<img src='./Pruebas de Codigo/Box Model/Borde/Borde.png' height='250'>
+
+<div id='id4.4'>
+
+* ### **Contorno**
+Propiedad `outline` es muy parecida a `border`, la diferencia de `outline` no es parte del modelo de caja.
+`outline` es como una línea flotante, a diferencia de `border` que es parte de la caja, el **outline** no tiene la propiedad de cambiar independientemente sus lados.
+Orientado mas para la accesibilidad, navegar con el teclado e indicar en que parte la página estan.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+            }
+            span{
+                display: inline-block;
+                padding: 20px;
+                outline: solid 20px red;
+                margin: 5px;
+                outline-style: solid;
+                outline-width: 20px;
+                outline-color: red;
+            }
+
+        </style>
+    </head>
+    <body>
+        <span>BOX MODEL</span>
+    </body>
+</html>
+```
+**Resultado:**  
+<img src='./Pruebas de Codigo/Box Model/Contorno-Outline/Outline.png' height='180'>
+
+
+<div id='id5'>
+
+## **5. Estilos**
+
+Son los estilos que se puede dar a la página web a traves de diferentes propiedades.
+
+<div id='5.1'>
+
+* ### **Fondo-Backgroud**
+Propiedad Background, se utiliza para cambiar el color de los fondos, pero tambien se puede icluir imagnes o degradados.
+
+* **`background: rgb();`**: permite dar una combinación de colores entre rgb, pudiendo variar el valor de cada color de 0 - 255.
+* **`background: linear-gradient(blue, red);`**: Sirve para hacer gradientes de color, entre parentesis se coloca los colores a utilizar, se puede dar direccion de la siguiente manera: `background: linear-gradient(to left, #000, #fff);`
+* **`background-repeat: no-repeat;`**: Es usado para no repetir el background.
+* **`background-position: center;`**: para la ubicación de el backgroud, como de una imagen.
+* **`background: url();`**: Es para colocar una imagen.
+* **`background-image: url();`**: Es para incluir imagenes
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html{
+                height: 100%;
+            }
+            body{
+                margin: 0;
+                background: rgb(120, 170, 158);
+                background: linear-gradient(blue, red) no-repeat;
+                /* background-repeat: no-repeat; */
+                background: 10px 30px / 100px url(./783797.jpg) no-repeat skyblue;
+                /* background-position: top; */
+                /* background-size: 200px; */
+                /* background-color: skyblue; */
+                /* background-image: url(); */
+                /* background: linear-gradient(to left, #000, #fff); */
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>Background</div>
+    </body>
+</html>
+```
+
+**Resultado:**  
+<img src='./Pruebas de Codigo/Estilos/Fondo-Background/Background.png' height='180'>
+
+<div id='id5.2'>
+
+* ### **Color**
+
+El color es una experiencia generada por los sentidos debido al fenómeno de la emisión de luz, reflejada por los objetos al incidir con una determinada intensidad
+Tenemos varias caracteristicas en color:
+* **`opacity: 1;`**: Esto representa la opacidad o transparencia y este es un valor que va de **0 - 1** donde `0` es totalmente transparente y `1` es totalmente visible, los valores intermedios dan sus respectivas, sirve tanto para el color del texto, del fondo y de los bordes de los elementos. Es recomendado trabajar con paleta de colores para el desarrollo de páginas web.
+
+* **`color: #ff0000;`**: Tambien se puede escribir de otra manera los colores, como en este caso usando el código hexadecimal, donde se representa con números y letras: **`0-9 y a-f`** donde `f` es el valor más alto y `0` el mínimo donde `ff0000` representa el rojo ya que los primeros valores `ff` representan el rojo, despues el verde `00` y por último el azul `00`.
+
+* **`background: rgba(255,0,0,0.5);`**: Otra manera de agregar colores es a traves de **`rgb`** que representa **`r`**=red (rojo), **`g`**=green (verde) y **`b`**=blue (azul), la letra **`a`**: representa la opacidad, los valores de rgb van de **`0-255`**
+
+* **`border: solid 10px hsl(0,100%,50%);`**: Tambien se puede presentar los colorea a traves de **`hsl`** donde: **`h`**=Hue (Tono) esta es una rueda de 360 grados siendo `0` el valor mínimo y `360`, **`S`**=Saturation (Saturación) va entre los valores de **`0-100%`** y por último está **`l`**=Luminance (Luminosidad) va entre los valores **`0-100%`**. 
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                color: #f0fa28;
+                background: rgba(255,0,0,0.5);
+                border: solid 10px hsl(175,70%,50%);
+                /*  */
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Color</h1>
+    </body>
+</html>
+```
+
+**Resultado:**  
+<img src='./Pruebas de Codigo/Estilos/Color/Color.png' height='150'>
