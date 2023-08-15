@@ -21,7 +21,7 @@
 5. [Estilos](#id5)
     * [Fondo - Background](#id5.1)
     * [Color](#id5.2)
-6. [Layouts](#id6)
+6. [Disposición](#id6)
     * [Layouts](#id6.1)
     * [Prefijos](#id6.2)
     * [Posiciones](#id6.3)
@@ -720,3 +720,92 @@ Tenemos varias caracteristicas en color:
 
 **Resultado:**  
 <img src='./Pruebas de Codigo/Estilos/Color/Color.png' height='150'>
+
+<div id='id6'>
+
+## **6. Disposición**
+
+<div id='id6.1'>
+
+* ### **Layouts**
+Sirve para hacer referencia a la manera en que están distribuidos los elementos y las formas dentro de un diseño, en el pasado en **HTML** se realizaba esto usando **Tablas**, por que no existian las herramientas para hacer la disposición. Mas tarde se usaba framworks de css para organizar la página web.  
+Actualmente se cuenta con herramientas enfocadas en la Disposición o Layout como:
+
+* **`flexbox`**
+* **`css.grids`**
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html{
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                min-height: 100%;
+                display: grid;
+                grid-template-columns: 100px auto;
+                grid-template-rows: 40px auto 100px;
+                gap: 10px;
+            }
+            nav,
+            aside,
+            main,
+            footer {
+                border-radius: 5 px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            nav{
+                background: lightsalmon;
+                justify-content: space-around;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+            aside{
+                background: violet;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+            main{
+                background: greenyellow;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+            footer{
+                background: cornflowerblue;
+                grid-row-start: 3;
+                grid-row-end: 3;
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="/home">Hogar</a>
+            <a href="/more">Aprende</a>
+            <a href="/about">Acerca De</a>
+        </nav>
+        <aside>Contenido Lateral</aside>
+        <main>Contenido Principal</main>
+        <footer>
+            &copy Darwin Enríquez 2023.
+        </footer>
+    </body>
+</html>
+```
+**Resultado:**  
+<img src='./Pruebas de Codigo/Disposición/Layout/Layout.png' height='500'>
+
+<div id='id6.2'>
+
+* ### **Prefijos**
