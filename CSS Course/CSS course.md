@@ -731,7 +731,7 @@ Tenemos varias caracteristicas en color:
 Sirve para hacer referencia a la manera en que están distribuidos los elementos y las formas dentro de un diseño, en el pasado en **HTML** se realizaba esto usando **Tablas**, por que no existian las herramientas para hacer la disposición. Mas tarde se usaba framworks de css para organizar la página web.  
 Actualmente se cuenta con herramientas enfocadas en la Disposición o Layout como:
 
-* **`flexbox`**
+* **`flexbox`**: Permite organizar el contenido de **HTML**
 * **`css.grids`**
 
 ```html
@@ -809,3 +809,37 @@ Actualmente se cuenta con herramientas enfocadas en la Disposición o Layout com
 <div id='id6.2'>
 
 * ### **Prefijos**
+Prefijos de proveedor, estos se usan para definir para que navegador va a servir las diferentes configuraciones que apliquemos a nuestra página web, se usara como ejemplo de una propiedad llamada `transition`.  
+* `-webkit-transition: all 4s ease`: Esto para **Safari**
+* `-moz-transition: all 4s ease`: Esto para **Mozilla**
+* `-ms-transition: all 4s ease`: Esto para **Microsoft**
+* `-o-transition: all 4s ease`: Esto para **Opera**
+* `transition: all 4s ease`: Esto para **todos**, actualmente ya esta estandarizado. 
+
+En el pasado se usaba esos prefijos si se deseaba que cierta funcionalidad sirva en los diferentes navegadores, sin embargo es una buena practica usar los prefijos ya que en los navegadores antiguos aún es requerido.
+
+Esto nos da acceso a propiedades únicas de **CSS** que solo funcionan en un navegador especifico.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                -webkit-transition: all 4s ease;
+                -moz-transition: all 4s ease;
+                -ms-transition: all 4s ease;
+                -o-transition: all 4s ease;
+                transition: all 4s ease;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Prefijos de Proveedor</h1>
+    </body>
+</html>
+```
+
+<div id='id6.3'>
+
+* ### **Posiciones**
