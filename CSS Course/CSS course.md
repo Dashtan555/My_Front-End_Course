@@ -43,6 +43,8 @@ ___
 ## **1. Primeros Pasos**
 CSS sirve para dar estilo a nuestras páginas web.
 
+**CSS:** Cascading Style Sheets (Hojas de estilos en cascadas)
+
 <div id='id1.1'>
 
 * ### **Partes de CSS**
@@ -280,10 +282,15 @@ Los estilos aplicados a las etiquetas padres, se pasan directamente a las clases
 
 * ### **Especificidad**
 Esta sirve en una forma distinta de cascada, ya que da importancia en un sentido contrario al de cascada, dando mayor importancia a la especificidad con la que se apunte a los diferentes elementos.
+
 Señalando de la siguientes manera:
 * **`.`**: Para las `class`
 * **`#`**: Para los `id`
 * **`p.textos#textos1`**: Para un `id` en una `class` de una etiqueta `p`
+
+Es una buena practica de programación evitar la especificidad, haciendo más flexible al proyecto y de mucho más fácil mantenimiento.
+
+
 
 ```html
 <!DOCTYPE html>
@@ -843,3 +850,4 @@ Esto nos da acceso a propiedades únicas de **CSS** que solo funcionan en un nav
 <div id='id6.3'>
 
 * ### **Posiciones**
+ 
