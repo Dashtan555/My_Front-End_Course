@@ -9,7 +9,7 @@
 
 body{
     width: 100%;
-    height: 100hv;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +22,7 @@ body{
 .main{
     position: relative;
     width: 1000px;
-    min-height: 1000px;
+    min-width: 1000px;
     min-height: 600px;
     height: 600px;
     padding: 25px;
@@ -106,7 +106,7 @@ body{
     transition: all 0.3s;
 }
 
-.tittle{
+.title{
     font-size: 34px;
     font-weight: 700;
     line-height: 3;
@@ -142,7 +142,7 @@ body{
 }
 
 .login-form{
-    z-index: 0;
+    z-index: 100;
     left: calc(100% - 600px);
 }
 
@@ -175,3 +175,103 @@ body{
     transition: 1.25s;
 }
 
+.switch-circle-t{
+    top: -30%;
+    left: 60%;
+    width: 300px;
+    height: 300px;
+}
+
+.switch-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 400px;
+    padding: 50px 55px;
+    transition: 1.25s;
+}
+
+.switch-button{
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.switch-button:hover, .form-button:hover{
+    background-color: transparent;
+    border: 2px solid #4b70e2;
+    color: #4b70e2;
+    transition: all 0.3s;
+}
+
+.switch-button:focus .switch-button:active{
+    box-shadow: 2px 2px 6px #d1d9e6, -2px -2px 6px #f9f9f9;
+    transform: scale(0.97);
+    transition: 0.25s;
+}
+
+.is-txr{
+    left: calc(100% - 400px);
+    transition: 1.25s;
+    transform-origin: left;
+}
+
+.is-txl{
+    left: 0;
+    transition: 1.25s;
+    transform-origin: right;
+}
+
+.is-z200{
+    z-index: 200;
+    transition: 1.25s;
+}
+
+.is-hidden{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: 1.25s;
+}
+
+.is-gx{
+    animation: is-gx 1.25s;
+}
+
+@keyframes is-gx {
+    0%,
+    10%,
+    100%{
+        width: 400px;
+    }
+    30%,
+    50%{
+        width: 500px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main{
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 1000px) {
+    .main{
+        transform: scale(0.6);
+    }
+}
+
+@media (max-width: 800px) {
+    .main{
+        transform: scale(0.5);
+    }
+}
+
+@media (max-width: 600px) {
+    .main{
+        transform: scale(0.4);
+    }
+}
