@@ -185,7 +185,7 @@ Selectores, son como `p` que indica a que etiqueta se va a aplicar el estilo o c
 Se puede aplicar varios selectores como:
 * **`p`**: selecciona la etiqueta de `p` = párrafo, existen más como: `h1`, `h2`, `q` entre ottros.
 * **`.claseTexto`** Selecciona todas las etiquetas indicadoras del la `class="claseTexto"` seleccionada.
-* **`#textoUnico`** Selecciona a una sola etiqueta identificada con el `id=textoUnico`, id se puede usar solo una vez que indica a un solo elemento.
+* **`#textoUnico`** Selecciona a una sola etiqueta identificada con el `id=textoUnico`, id se puede usar como identificacion unica a un solo elemento.
 * **`.claseTexto span`** Selecciona la etiqueta `span` dentro de las etiquetas que tengas la `class=claseTexto`
 * **`p, span`** Selecciona todo los párrafos y span que se encuentren, llamado selector de grupo.
 * **`div > h2`**: Selecciona la etiqueta `h2` que es la hija de una etiqueta `div`.
@@ -249,10 +249,13 @@ Hay que tener en cuenta que los cambios se van leyendo de arriba a abajo siendo 
     </body>
 </html>
 ```
+**Resultado:**
+
+<img src="./Pruebas de Codigo/Fundamentos/Selectores/Captura de pantalla 2024-07-16 100919.png"/> 
 
 <div id='id2.3'>
 
-* ### **Cascada** ### 
+* ### **Cascada y Herencia** ### 
 En los archivos de las páginas web, se aplica los estilos en cascada, en el navegador primero se abre el archivo html, luego se aplican los estilos del archivo CSS en cascada, por lo cual se aplica al final el ultimo estilo definido, a continuación se presenta un ejemplo:
 
 ```html
@@ -298,21 +301,21 @@ Es una buena practica de programación evitar la especificidad, haciendo más fl
     <head>
         <style>
             p.textos#texto1{
-                color: blue !important;
+                color: blue !important; /*Palabra important da un nivel mas alto de importancia, evitar el uso de esta palabra demasiado especifico*/
             }
-            p.textos#texto1{
+            p.textos#texto1{ /* Selector de el id = texto1 en la clase = textos de la etiqueta de parrafo */
                 color: green;
             }
-            #texto1 {
+            #texto1 { /*Selector de identificacion "texto1" + especificidad */
                 color: yellow;
             }
-            .textos{
+            .textos{ /*Selector de la clase "textos" con mayor especificidad"
                 color: orange;
             }
-            p{
+            p{ /*Selector de etiqueta parrafo con mayor especificidad*/
                 color: red;
             }
-            body{
+            body{ /*Selector de div "Contenedor"*/
                 color: purple;
                 font-size: 25px;
             }
