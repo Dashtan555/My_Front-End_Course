@@ -8,14 +8,33 @@
 .title{
     justify-content: center;
     background-color: #722f37;
-    padding: 40px 10px 20px;
+    padding: 50px 10px 20px;
 }
 
 h1{
     color: azure;
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 40px;
+    font-size: 35px;
 }
 
+.contenido{
+    padding: 20px;
+}
 
+.sub1{
+    padding-bottom: 20px;
+}
+ .sub2{
+    padding-bottom: 20px;
+ }
+
+ p.sub1{
+    text-wrap: nowrap;
+    text-decoration: overline;
+ }
+
+ p.sub2{
+    font-style: italic;
+    color: blue;
+ }

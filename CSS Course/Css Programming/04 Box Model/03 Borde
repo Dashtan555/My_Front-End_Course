@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+            }
+
+            span{
+                display: inline-block;
+                border: outset 10px red;
+                padding: 20px;
+                border-top-color: blue;
+                border-left-color: blue;
+                border-bottom-style: double;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <span> Span </span>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+}
+
+div{
+    background: red;
+    padding: 10px;
+    margin: 10px;
+}
+
+span{
+    background: red;
+    /* arriba derecha abajo izquierda */
+    padding: 10px 20px 30px 40px;
+    /* con tres elementos arriba (derecha-izquierda) abajo */
+    /* con dos valores arriba-abajo derecha-izquierda */
+    margin: 5px 5px 30px 5px;
+    display: inline-block;
+}

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="02 style.css"/>
+    </head>
+    <body>
+        <div>Box Model</div>
+        <span>Span 1</span>
+        <span>Span 2</span>
+        <span>Span 3</span>
+    </body>
+</html>
