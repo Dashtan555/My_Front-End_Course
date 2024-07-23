@@ -5,26 +5,33 @@
 body{
     margin: 0;
     box-sizing: border-box;
-    background-color: #616d3d;
+    background-color: #616d3d;    
 }
 
 .page{
     padding: 10px;
     position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 .title{
     color: whitesmoke;
     text-align: center;
+    
 }
 .productos{
     background-color: whitesmoke;
     padding: 10px;
+    border-radius: 10px;
 }
 .prod1, .prod2{
     background-color: white;
-    margin: 5px;
+    margin: 5 px;
+    margin-bottom: 10px;
     border: 2px solid gray;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 h2.prod1, h2.prod2{
@@ -34,17 +41,22 @@ h2.prod1, h2.prod2{
 
 p.prod1, p.prod2{
     border: none;
+    margin-top: 10px;
 }
 
 img.prod1{
     width: 100px;
-    border: none;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: orange;
 
 }
 
 img.prod2{
     width: 100px;
-    border: none;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: orange;
 }
 
 a{
@@ -60,10 +72,8 @@ footer{
 }
 
 .barra{
-    height: 2px;
-    width: 250px;
+    height: 4px;
+    width: 600px;
     background-color: whitesmoke;
-    padding: 1px;
     margin: 10px;
-    display: flex;
 }
