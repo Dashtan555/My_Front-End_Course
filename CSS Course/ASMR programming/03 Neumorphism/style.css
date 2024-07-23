@@ -8,12 +8,14 @@ div{
 }
 
 .box{
-    margin-top: 100px;
-    margin-left: 100px;
+    margin: 100px;
     width: 100px;
-    height: 100px;
+    height: 50px;
     border-radius: 20px;
     background: linear-gradient(315deg, #9e9e9e, #bcbcbc);
     box-shadow:  -14px -14px 28px #898989,
              14px 14px 28px #d7d7d7;
+    text-align: center;
+    font-size: 28px;
+    font-style: italic;
 }
