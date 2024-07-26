@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+        <link rel="stylesheet" href="style.css"/>
+        <title>Responsive NavBar # 1| Dashtan</title>
+        
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+
+            <button type="button" class="navbar-burguer" onclick="toggleMenuOpen()">
+                <span class="material-icons">menu</span>
+            </button>
+
+            <h1 class="navbar-title">Dashtan</h1>
+            <nav class="navbar-menu">
+                <button type="button" class="active">Youtube</button>
+                <button type="button" class="active">Archive</button>
+                <button type="button">Projects</button>
+            </nav>
+        </nav>
+
+        <script type="text/javascript">
+            const toggleMenuOpen = () => document.body.classList.toggle("open");
+        </script>
+    </body>
+</html>

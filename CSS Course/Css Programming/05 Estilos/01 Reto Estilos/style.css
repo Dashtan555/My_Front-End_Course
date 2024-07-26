@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    background: url(estadio\ img.jpg);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.titulo{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+
+.tit{
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.tit2{
+    font-weight: 700;
+    font-size: 18.5px;
+    margin: 25px;
+}
+
+figcaption{
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: sans-serif;
+    margin: 25px;
+}
+
+.cuerpo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #8cdcdc;
+    padding: 50px;
+    width: 500px;
+    height: 500px;
+}
+
+a{
+    text-decoration: none;
+    margin: 25px;
+}
+   
+
