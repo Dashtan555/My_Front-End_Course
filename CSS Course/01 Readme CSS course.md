@@ -818,6 +818,228 @@ Actualmente se cuenta con herramientas enfocadas en la Disposición o Layout com
 
 <div id='id6.2'>
 
+
+* ### **Posiciones**
+Permite controlar las posiciones y entender el flujo de los elementos, en este ejemplo se colocar etiquetas **div** cada una definida de 80px - 80px de ancho y alto para presentar que el div se representa en **display** como bloque de forma predeterminada, pero a traves del uso de la propiedad **display** en css se puede modificar el comportacmiento de los elementos ya sea como bloque o elemento de linea, a continuación varios ejemplos.
+
+**Ejmplo**
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="01 style.css"/>
+        <title>Entender Posiciones | Dashtan</title>
+        <style>
+            div{
+                display: block;
+                width: 80px;
+                height: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="background: rgb(88,228,209)"></div>
+        <div style="background-color: rgb(187,255,0);"></div>
+        <div style="background: rgb(0,132,255)"></div>
+        <div style="background: rgb(119,0,255)"></div>
+        <div style="background: rgb(255,0,64)"></div>
+    </body>
+</html>
+```
+
+**Resultado:**  
+<img src='./Css Programming/06 Diseño/Div posiciones.png' height='500'>
+
+```html
+    <style>
+            div{
+                display: inline;
+                width: 80px;
+                height: 80px;
+            }
+```
+este codigo modificado anteriormente en el codigo anterior de disposicion muestra primeramente un error y como resultado nos da un página en blanco ya que se estan superponiendo todos los elementos.
+
+Existe una propiedad diferente la cual permite a los cuerpos comportarse como un mezcla de bloque y linea, este actua igual al comportamiento de el texto de parrafo
+
+```html
+    <style>
+            div{
+                display: inline-block;
+                width: 80px;
+                height: 80px;
+            }
+```
+**Resultado:**  
+<img src='./Css Programming/06 Diseño/Div inline-block.png' weight='500'>
+
+A continuación se va a colocar un id al primer **div** para poder a traves de **Css** dar diferentes propiedades o caracteristicas, primero se usa el atributo **position** en el cual existen diferentes valores
+
+**Position:**
+* **static** Es la propiedad predeterminada del documento sin cambio alguno, los elemntos funcionan con el flujo del documento.
+* **relative** Este tambien funciona con el flujo del elemento pero permite colocar mas propiedades que altera el comportamiento del mismo, aqui para mover el elemento las propiedades **top**, **botton**, **left** o **right** es relativa al mismo elemento.
+* **absolute** este valor rompe el flujo del documento, es como si el elemento **div** con id = primero saliera del flujo del documento y el resto de elemtos ocuran su lugar, se hace similar como explicar al trabajar en capas, en este las propiedades para mover son relativas al **body**
+
+    * **z-index** Se usa a traves de número los cuales representan el nivel de altura que se encuentran los elementos **0** se mantiene dónde esta **1** sobre los elentos para la propiedad **absolute**.
+
+* **fixed** este elemento saca del flujo del documento y lo coloca flotando ensima del documento, la diferencia entre esta propiedad y la proiedad **absolute** es que **fixed** esta ubicado relativo a la pantallam al navegador, mientras que **absolute** se encuentra relativo al elemento padre.
+**Static**
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="01 style.css"/>
+        <title>Entender Posiciones | Dashtan</title>
+        <style>
+            div{
+                display: inline-block;
+                width: 80px;
+                height: 80px;
+            }
+
+            #primero{
+                position: static;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="primero" style="background: rgb(88,228,209)"></div>
+        <div style="background-color: rgb(187,255,0);"></div>
+        <div style="background: rgb(0,132,255)"></div>
+        <div style="background: rgb(119,0,255)"></div>
+        <div style="background: rgb(255,0,64)"></div>
+    </body>
+</html>
+```
+
+**Resultado:**  
+En **static** no hay cambio ya que es la forma predeterminada de comportamiento del documento.
+
+**Relative**
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="01 style.css"/>
+        <title>Entender Posiciones | Dashtan</title>
+        <style>
+            div{
+                display: inline-block;
+                width: 80px;
+                height: 80px;
+            }
+
+            #primero{
+                position: relative;
+                top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="primero" style="background: rgb(88,228,209)"></div>
+        <div style="background-color: rgb(187,255,0);"></div>
+        <div style="background: rgb(0,132,255)"></div>
+        <div style="background: rgb(119,0,255)"></div>
+        <div style="background: rgb(255,0,64)"></div>
+    </body>
+</html>
+```
+**Resultado:**  
+En este resultado se puede observar como el primer **div** se ha desplazado **10px** desde el borde superior, y solo afecta a este **div**, pero aún mantiene su posición, se pueden usar varias propiedades como **left** para variar su posición.
+
+<img src='./Css Programming/06 Diseño/Div relative.png' weight='500'>
+
+**Absolute**
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="01 style.css"/>
+        <title>Entender Posiciones | Dashtan</title>
+        <style>
+            div{
+                display: inline-block;
+                width: 80px;
+                height: 80px;
+            }
+
+            #primero{
+                position: absolute;
+                top: 20px;
+                left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="primero" style="background: rgb(88,228,209)"></div>
+        <div style="background-color: rgb(187,255,0);"></div>
+        <div style="background: rgb(0,132,255)"></div>
+        <div style="background: rgb(119,0,255)"></div>
+        <div style="background: rgb(255,0,64)"></div>
+    </body>
+</html>
+```
+**Resultado**
+Como se puede apreciar bajo el primer elemento se encuentran el resto de elementos, y si damos propiedades como **top** o **left** esto desplaza al elemento sin alterar al resto de elementos como si fuera parte de otro documento, al igual que trabajar en capas si lo haz hecho en alguna ocación en los softwares de diseño.
+
+<img src='./Css Programming/06 Diseño/Div absolute.png' weight='500'>
+
+**Fixed**
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="01 style.css"/>
+        <title>Entender Posiciones | Dashtan</title>
+        <style>
+            div{
+                display: inline-block;
+                width: 80px;
+                height: 80px;
+            }
+
+            #primero{
+                position: fixed;
+                top: 20px;
+                left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="primero" style="background: rgb(88,228,209)"></div>
+        <div style="background-color: rgb(187,255,0);"></div>
+        <div style="background: rgb(0,132,255)"></div>
+        <div style="background: rgb(119,0,255)"></div>
+        <div style="background: rgb(255,0,64)"></div>
+    </body>
+</html>
+```
+**Resultado**
+Al hacer scroll se puede evidenciar que el elemento **fixed** continua flotando en la misma posición, se queda exactamente en la misma posicion, esto es comunmente usado por ejemplo al hacer una barra de navegación que no se mueve al realizar el scroll, como las de facebook o instagram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * ### **Prefijos**
 Prefijos de proveedor, estos se usan para definir para que navegador va a servir las diferentes configuraciones que apliquemos a nuestra página web, se usara como ejemplo de una propiedad llamada `transition`.  
 * `-webkit-transition: all 4s ease`: Esto para **Safari**

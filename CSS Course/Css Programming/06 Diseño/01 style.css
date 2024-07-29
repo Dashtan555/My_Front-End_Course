@@ -1,0 +1,8 @@
+body{
+    box-sizing: border-box;
+}
+
+div{
+    width: 80px;
+    height: 80px;
+}
