@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="style.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modern Popup | Dashtan</title>
+    </head>
+    <body>
+        <button onclick="toggleModal()" type="button">Open Modal</button>
+        <div class="modal-background" onclick="toggleModal()"></div>
+        <div class="modal">
+            <h2>Modal Window</h2>
+            <p>You have opened the modal, they are great for displaying
+                critical information or confirmation actions!
+            </p>
+        </div>
+    </body>
+    <script>
+        const toggleModal = () =>{
+            const bodyClassList = document.body.classList;
+            if(bodyClassList.contains("open")){
+                bodyClassList.remove("open");
+                bodyClassList.add("closed");
+            }else{
+                bodyClassList.remove("closed");
+                bodyClassList.add("open");
+            }
+        }
+    </script>
+</html>

@@ -24,7 +24,7 @@
 6. [Disposición](#id6)
     * [Layouts](#id6.1)
     * [Prefijos](#id6.2)
-    * [Posiciones](#id6.3)
+    * [Position](#id6.3)
     * [Floats](#id6.4)
     * [Flexbox](#id6.4)
     * [Grid](#id6.4)
@@ -818,7 +818,6 @@ Actualmente se cuenta con herramientas enfocadas en la Disposición o Layout com
 
 <div id='id6.2'>
 
-
 * ### **Posiciones**
 Permite controlar las posiciones y entender el flujo de los elementos, en este ejemplo se colocar etiquetas **div** cada una definida de 80px - 80px de ancho y alto para presentar que el div se representa en **display** como bloque de forma predeterminada, pero a traves del uso de la propiedad **display** en css se puede modificar el comportacmiento de los elementos ya sea como bloque o elemento de linea, a continuación varios ejemplos.
 
@@ -877,8 +876,45 @@ Existe una propiedad diferente la cual permite a los cuerpos comportarse como un
 
 A continuación se va a colocar un id al primer **div** para poder a traves de **Css** dar diferentes propiedades o caracteristicas, primero se usa el atributo **position** en el cual existen diferentes valores
 
-**Position:**
-* **static** Es la propiedad predeterminada del documento sin cambio alguno, los elemntos funcionan con el flujo del documento.
+<div id='id6.3'>
+
+* ### **Prefijos**
+Prefijos de proveedor, estos se usan para definir para que navegador va a servir las diferentes configuraciones que apliquemos a nuestra página web, se usara como ejemplo de una propiedad llamada `transition`.  
+* `-webkit-transition: all 4s ease`: Esto para **Safari**
+* `-moz-transition: all 4s ease`: Esto para **Mozilla**
+* `-ms-transition: all 4s ease`: Esto para **Microsoft**
+* `-o-transition: all 4s ease`: Esto para **Opera**
+* `transition: all 4s ease`: Esto para **todos**, actualmente ya esta estandarizado. 
+
+En el pasado se usaba esos prefijos si se deseaba que cierta funcionalidad sirva en los diferentes navegadores, sin embargo es una buena practica usar los prefijos ya que en los navegadores antiguos aún es requerido.
+
+Esto nos da acceso a propiedades únicas de **CSS** que solo funcionan en un navegador especifico.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                -webkit-transition: all 4s ease;
+                -moz-transition: all 4s ease;
+                -ms-transition: all 4s ease;
+                -o-transition: all 4s ease;
+                transition: all 4s ease;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Prefijos de Proveedor</h1>
+    </body>
+</html>
+```
+
+<div id='id6.3'>
+
+* ### **Position**
+
+ * **static** Es la propiedad predeterminada del documento sin cambio alguno, los elemntos funcionan con el flujo del documento.
 * **relative** Este tambien funciona con el flujo del elemento pero permite colocar mas propiedades que altera el comportamiento del mismo, aqui para mover el elemento las propiedades **top**, **botton**, **left** o **right** es relativa al mismo elemento.
 * **absolute** este valor rompe el flujo del documento, es como si el elemento **div** con id = primero saliera del flujo del documento y el resto de elemtos ocuran su lugar, se hace similar como explicar al trabajar en capas, en este las propiedades para mover son relativas al **body**
 
@@ -1025,54 +1061,11 @@ Como se puede apreciar bajo el primer elemento se encuentran el resto de element
 **Resultado**
 Al hacer scroll se puede evidenciar que el elemento **fixed** continua flotando en la misma posición, se queda exactamente en la misma posicion, esto es comunmente usado por ejemplo al hacer una barra de navegación que no se mueve al realizar el scroll, como las de facebook o instagram
 
+<div id='id6.4'>
 
+* ### **Floats**
+La propiedad **float** en **CSS** especifica cómo debe flotar un elemento, da formato al contenido permitiendo flotar a un imagen usando las propiedadesÑ
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-* ### **Prefijos**
-Prefijos de proveedor, estos se usan para definir para que navegador va a servir las diferentes configuraciones que apliquemos a nuestra página web, se usara como ejemplo de una propiedad llamada `transition`.  
-* `-webkit-transition: all 4s ease`: Esto para **Safari**
-* `-moz-transition: all 4s ease`: Esto para **Mozilla**
-* `-ms-transition: all 4s ease`: Esto para **Microsoft**
-* `-o-transition: all 4s ease`: Esto para **Opera**
-* `transition: all 4s ease`: Esto para **todos**, actualmente ya esta estandarizado. 
-
-En el pasado se usaba esos prefijos si se deseaba que cierta funcionalidad sirva en los diferentes navegadores, sin embargo es una buena practica usar los prefijos ya que en los navegadores antiguos aún es requerido.
-
-Esto nos da acceso a propiedades únicas de **CSS** que solo funcionan en un navegador especifico.
-
-```html
-<!DOCTYPE html>
-<html>
-    <head>
-        <style>
-            h1{
-                -webkit-transition: all 4s ease;
-                -moz-transition: all 4s ease;
-                -ms-transition: all 4s ease;
-                -o-transition: all 4s ease;
-                transition: all 4s ease;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Prefijos de Proveedor</h1>
-    </body>
-</html>
-```
-
-<div id='id6.3'>
-
-* ### **Posiciones**
- 
+* **left**: Izquierda del contenedor 
+* **right**: Derecha del contenedor
+* **none**: El elemento no flota
