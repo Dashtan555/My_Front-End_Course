@@ -1066,6 +1066,56 @@ Al hacer scroll se puede evidenciar que el elemento **fixed** continua flotando 
 * ### **Floats**
 La propiedad **float** en **CSS** especifica cómo debe flotar un elemento, da formato al contenido permitiendo flotar a un imagen usando las propiedadesÑ
 
-* **left**: Izquierda del contenedor 
-* **right**: Derecha del contenedor
-* **none**: El elemento no flota
+* **left**: Izquierda del contenedor. 
+* **right**: Derecha del contenedor.
+* **none**: El elemento no flota, (se mostrara solo donde aparece en el texto) propiedad predeterminanda.
+* **inherit**: El elemento herada la propiedad flotante de su padre.
+
+La propiedad **clear: both** evita que los elemntos desigandos como **float** "floten".
+
+```html
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="02 style.css">
+        <title>Float | Dashtan</title>
+        <style>
+            div{
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+            }
+            #primero{
+                float: right;
+            }
+
+            #segundo{
+                float: left;
+            }
+
+            p{
+                text-align: justify;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="primero" style="background: red;"></div>
+        <div id="segundo" style="background: greenyellow;"></div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            Nihil ipsa dignissimos at, saepe nulla iste placeat totam ad provident, 
+            facilis quisquam laborum esse. Veniam veritatis 
+            iure praesentium quibusdam et odit.
+        </p>
+        
+    </body>
+</html>
+```
+**Resultado**
+
+<img src='./Css Programming/06 Diseño/float.png' weight='500'>
+
+<div id='id6.5'>
+
+* ### **Flex-box**
+Permite alinear elementos,
