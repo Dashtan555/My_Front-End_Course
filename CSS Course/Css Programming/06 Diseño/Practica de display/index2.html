@@ -1,0 +1,41 @@
+
+<style>
+  /* Selecciona todos los <dt> adyacentes a un <dd> */
+  dt + dd {
+    font-weight: bold;
+  }
+
+  /* Selecciona todos los <dd> que están después de un <dt> */
+  dt ~ dd {
+    margin-left: 20px;
+  }
+
+  /* Uso del selector :has() para navegadores compatibles */
+  dl:has(dt) {
+    border: 1px solid #ccc;
+  }
+
+  /* Estilos para un <div> dentro de <dl> */
+  dl div {
+    background-color: #f9f9f9;
+    padding: 10px;
+  }
+
+</style>
+
+<dl>
+  <div>
+      <dt>Término 1</dt>
+      <dd>Descripción 1 para el término 1</dd>
+      <dd>Descripción 2 para el término 1</dd>
+  </div>
+  <dt>Término 2</dt>
+  <dd>Descripción para el término 2</dd>
+  <div>
+      <dt>Término 3</dt>
+      <dd>Descripción 1 para el término 3</dd>
+  </div>
+  <script>
+      // Código JavaScript para manipular la lista
+  </script>
+</dl>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Position</title>
+    <style>
+        .static-element {
+            position: static;
+            background-color: lightblue;
+            padding: 10px;
+            margin: 5px;
+        }
+        .sticky-element {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            position: sticky;
+            top: 20px;
+            z-index: 1;
+        }
+        .relative-element {
+            position: relative;
+            top: 10px;
+            left: 20px;
+            background-color: lightgreen;
+            padding: 10px;
+            margin: 5px;
+        }
+        .absolute-container {
+            position: relative;
+            height: 200px;
+            background-color: lightgrey;
+            padding: 10px;
+            margin: 5px;
+        }
+        .absolute-element {
+            position: absolute;
+            top: 50px;
+            right: 0px;
+            background-color: lightcoral;
+            padding: 10px;
+            margin: 5px;
+        }
+        .fixed-element {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: lightyellow;
+            padding: 10px;
+            margin: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="static-element">Elemento estático</div>
+    <div class="sticky-element">Elemento pegajoso</div>
+    <div class="relative-element">Elemento relativo</div>
+    <div class="absolute-container">
+        Contenedor absoluto
+        <div class="absolute-element">Elemento absoluto</div>
+    </div>
+    <div class="fixed-element">Elemento fijo</div>
+    
+    <div style="height: 1000px;">Scroll para ver el comportamiento de los elementos</div>
+</body>
+</html>

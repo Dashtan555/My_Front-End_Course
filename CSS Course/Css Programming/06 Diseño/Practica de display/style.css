@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+
+.numero1{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    align-content: center;
+}
+.contenedor{
+    width: auto;
+    height: auto;
+    display: flex;
+    background: gray;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+
+#uni{
+    position: sticky;
+    top: 10px;
+}
